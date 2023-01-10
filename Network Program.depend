@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1668013318 source:/home/tim2/Documents/Network Program/network_imp.cpp
+	"network.h"
+
+1668014634 /home/tim2/Documents/Network Program/network.h
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<string>
+	<regex>
+	<fstream>
+	<sstream>
+	<vector>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<string.h>
+	<netinet/in.h>
+
+1668012907 source:/home/tim2/Documents/Network Program/network_prg.cpp
+	"network.h"
+

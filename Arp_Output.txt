@@ -1,0 +1,14 @@
+? (192.168.1.103) at cc:40:d0:39:64:31 [ether] on wlan2
+? (192.168.1.103) at cc:40:d0:39:64:31 [ether] on eth0
+? (192.168.1.103) at cc:40:d0:39:64:31 [ether] on wlan0
+? (192.168.1.53) at <incomplete> on eth0
+TIMSABROUTER.TIMSABDOMAIN.COM (192.168.1.1) at 40:62:31:07:df:3d [ether] on eth1
+? (192.168.1.125) at 30:24:a9:ba:77:f8 [ether] on wlan2
+TIMSABROUTER.TIMSABDOMAIN.COM (192.168.1.1) at 40:62:31:07:df:3d [ether] on wlan1
+TIMSABROUTER.TIMSABDOMAIN.COM (192.168.1.1) at 40:62:31:07:df:3d [ether] on wlan2
+? (192.168.1.125) at 30:24:a9:ba:77:f8 [ether] on eth0
+TIMSABROUTER.TIMSABDOMAIN.COM (192.168.1.1) at 40:62:31:07:df:3d [ether] on wlan0
+? (192.168.1.103) at cc:40:d0:39:64:31 [ether] on wlan1
+TIMSABROUTER.TIMSABDOMAIN.COM (192.168.1.1) at 40:62:31:07:df:3d [ether] on eth0
+? (192.168.1.125) at 30:24:a9:ba:77:f8 [ether] on wlan1
+? (192.168.1.125) at 30:24:a9:ba:77:f8 [ether] on wlan0
