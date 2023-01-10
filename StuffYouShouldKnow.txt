@@ -1,0 +1,70 @@
+Stuff you should know
+
+Connect to CISCO SWITCH via USB to SERIAL command:
+cu -l /dev/ttyU0
+
+
+Empty A file
+cat /dev/null > "THE FILE PATH/FILE NAME"
+
+
+Send Terminal Input Interactively to a File
+cat << \EOF > THE_FILE
+commmands
+EOF
+
+
+
+IF THEN STRUCTURE:
+if <test_expression>; then
+  <command-to-execute>
+elif <test_expression>; then
+  <command-to-execute>
+else
+  <command-to-execute>
+fi
+
+#Assign Command Output To a Variable
+var=$(command-name-here) var=$(command-name-here arg1) var=$(/path/to/command) var=$(/path/to/command arg1 arg2) ...
+var=`command-name-here` var=`command-name-here arg1` var=`/path/to/command` var=`/path/to/command arg1 arg2`
+
+# ip command
+ip help
+ip link help
+ip link show
+ip link show dev [device]
+ip -s link
+ip -s link ls [interface]
+ip -s -s link ls [interface]
+ip link ls up
+ip link set [interface] up/down
+ip link set txqueuelen [number] dev [interface]
+ip link set mtu [number] dev [interface]
+ip addr help
+ip addr
+ip addr show
+ip addr show dev [interface]
+ip -4 addr
+ip -6 addr
+ip addr add [ip_address] dev [interface]
+ip addr add brd [ip_address] dev [interface]
+ip addr del [ip_address] dev [interface]
+ip route help
+ip route 
+ip route list SELECTOR
+ip route list [ip_address]
+ip route add [ip_address] dev [interface]
+ip route add [ip_address] via [gatewayIP]
+ip route add default [ip_address] dev [device]
+ip route add default [network/mask] via [gatewayIP]
+ip route del [ip_address]
+ip route del default
+ip route del [ip_address] dev [interface]
+ip neigh help
+ip neigh show
+ip neigh add [ip_address] dev [interface]
+ip neigh del [ip_address] dev [interface]
+
+iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+
+sudo service apache2 start
