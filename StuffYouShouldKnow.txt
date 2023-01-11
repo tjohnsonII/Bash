@@ -1,21 +1,70 @@
-Stuff you should know
+#Stuff you should know!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-Connect to CISCO SWITCH via USB to SERIAL command:
+#currnet user
+whoami
+
+#List login info
+who -a -H
+
+#list free memory
+df -k
+
+#list file system tree
+tree
+
+#list storage devices
+lsblk -a
+fdisk -l
+
+#list mount points of storage devices
+lsblk -l
+mount
+cat /etc/mtab
+
+#Format a drive
+mkfs -t ext4 /dev/sda
+
+#create partitions
+fdisk /dev/sdam
+
+#fuser - identify processes using files or sockets
+fuser /dev/sda
+
+#mount a drive
+mount -t ext4 /dev/sda /mnt
+
+#unmount a drive
+umount /dev/sda
+
+#install applications (debian - apt) also yum, dpkg, rpm
+apt update
+apt upgrade
+apt-get `package name`
+apt list
+apt autoclean
+apt autoremove
+apt-get install 'package name'
+apt-get remove `package name`
+apt dist-upgrad
+apt full-upgrade
+
+
+#Connect to CISCO SWITCH via USB to SERIAL command:
 cu -l /dev/ttyU0
 
 
-Empty A file
+#Empty A file
 cat /dev/null > "THE FILE PATH/FILE NAME"
 
 
-Send Terminal Input Interactively to a File
+#Send Terminal Input Interactively to a File
 cat << \EOF > THE_FILE
 commmands
 EOF
 
 
 
-IF THEN STRUCTURE:
+#IF THEN STRUCTURE:
 if <test_expression>; then
   <command-to-execute>
 elif <test_expression>; then
@@ -27,6 +76,21 @@ fi
 #Assign Command Output To a Variable
 var=$(command-name-here) var=$(command-name-here arg1) var=$(/path/to/command) var=$(/path/to/command arg1 arg2) ...
 var=`command-name-here` var=`command-name-here arg1` var=`/path/to/command` var=`/path/to/command arg1 arg2`
+
+nmap 192.168.1.53
+sudo iptables --list
+ss -na
+ss -lntu
+
+
+#List network configuration
+ifconfig
+
+#List arp table
+arp -a
+
+#List listing ports
+netstat -a
 
 # ip command
 ip help
@@ -67,4 +131,93 @@ ip neigh del [ip_address] dev [interface]
 
 iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
+#start apache or a service (service or systemctl)
 sudo service apache2 start
+
+#This is the home directory for index.html for apache2
+/var/www/html   
+
+#change ownership
+      option user : group <the directory or file>
+chown -R     $USER:$USER /a/directory/or/file
+
+#change permission
+      option <the directory or file>
+chmod -R 755 /var/www/html
+
+#start a service
+systemctl (action, ex. enable | disable) (option, ex. --now) (service name, mysql)
+service (name of service, ex. ssh)  (action start | stop | reload , etc)
+
+#authentication keys for packages/software
+gpg has replaced apt-key
+
+#!!!!!!!!!!!!!!!!!!!!!!   MYSQL !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+#Start:
+
+service mysql start
+
+#Login into MySQL from a Unix Shell, type “mysql -h localhost -u root -p” and press double enter because by default there is no password set for user root in MySQL.
+
+mysql -h localhost -u root -p
+
+#Create a new database, type “create database <DB Name>;” and to show all databases, type “show databases;” in same console.
+
+create database a_database_name;
+
+#To switch or select the database, then you can type “use <DB Name>;”
+
+use a_database_name;
+
+#To create table via command line, type “CREATE TABLE <table name> (id VARCHAR(20), firstname VARCHAR(20), lastname VARCHAR(20), username VARCHAR(8), email VARCHAR(35), password VARCHAR(25));”
+
+CREATE TABLE a_database_name (id VARCHAR(20), firstname VARCHAR(20), lastname VARCHAR(20), username VARCHAR(8), email VARCHAR(35), password VARCHAR(25));
+
+#show all tables, you can type “show tables“.
+
+show tables;
+
+#show all databases show databases
+
+show databases;
+
+#To Insert any data, you can type “INSERT into <table name> (id, firstname, lastname, username, email, password) VALUES (‘1’, ‘Yeah’, ‘Hub’, ‘yeahhub’, ‘yeahhub@gmail.com’, ‘123456’);”
+
+INSERT into a_database_name (id, firstname, lastname, username, email, password) VALUES ('1', 'YEAH', 'Hub', 'yeahhub', 'yeahhub@gmail.com', '123456');
+
+#To see database’s field formats, type “describe <table name>;”
+
+describe a_database_name; 
+
+#To see all the data in a particular table, you can type “SELECT * FROM <table name>;”
+
+SELECT * FROM a_database_name;
+
+#To show the data of a particular column, then the command is “SELECT <column name> FROM <table name>;”
+
+SELECT username from a_database_name;
+
+#Count the number of rows of a particular table, type “SELECT COUNT(*) FROM <table name>;”
+
+SELECT COUNT(*) FROM user;
+
+#Create a new user in MySQL database, then you’ve to switch the database to MySQL first by typing “use mysql;” in same console.
+
+show databases;
+use a_database_name;
+
+#Then type “INSERT INTO user (Host,User,Password) VALUES(‘%’,’username’,PASSWORD(‘password’));”
+
+INSERT INTO user (HOST,User,Password) VALUES ('%','username',PASSWORD('password'));
+
+#update the database permissions/privileges, type “flush privileges;”
+
+flush privileges;
+
+#To delete any row from a particular table, type “DELETE from <table name> where <field name> = ‘whatever’;”
+
+DELETE from user where lastname='hub';
+
+#delete the whole table, then the command is “drop table <table name>;”
+
+drop table a_database_name;
